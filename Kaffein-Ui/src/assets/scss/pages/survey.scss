@@ -1,0 +1,422 @@
+@font-face {
+  font-family: "MyFont";
+  src: url(../../../assets/fonts/century751bt.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "MyFont2";
+  src: url(../../../assets/fonts/century751italicbt.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "MyFont3";
+  src: url(../../../assets/fonts/GothamBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "MyFont4";
+  src: url(../../../assets/fonts/GothamBook.ttf) format("truetype");
+}
+
+.line {
+  height: 100%;
+  border: 1px solid black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.survey {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "MyFont4", sans-serif;
+
+  .survey-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .survey-img {
+      width: 296px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 163px;
+        height: 44px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      line-height: 24px;
+      font-size: 16px;
+      font-family: "MyFont3";
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 40px;
+      font-family: "MyFont3";
+    }
+  }
+
+  .survey-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    width: 100%;
+
+    .survey-content-heading {
+      .survey-content {
+        font-family: "MyFont3";
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+
+      width: 500px;
+    }
+
+    .survey-button {
+      height: 56px;
+      width: 288px;
+
+      .survey-button-send {
+        background-color: #2a2828;
+        color: white;
+        border: none;
+        font-family: "MyFont";
+        cursor: pointer;
+        border-radius: 4px;
+        border: 1px solid black;
+        padding: 16px;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 600px;
+
+    .select-dropdown {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: "MyFont", sans-serif;
+      font-weight: 500;
+
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+      }
+    }
+  }
+}
+
+.survey-container {
+  width: 808px;
+  height: 392px;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 30px;
+  display: flex;
+  gap: 10px;
+
+  .survey-left {
+    width: 30%;
+
+    .category {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+
+      .div {
+        font-family: "MyFont3";
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        align-items: flex-start;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 14%;
+      }
+    }
+  }
+}
+
+.survey-right {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+
+  .last {
+    border-right: none !important;
+  }
+
+  .line {
+    height: 100%;
+    border: 1px solid black;
+  }
+
+  .right-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .input {
+      height: 60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .survey-header {
+      font-family: "MyFont3";
+      height: 67px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  .feedback-textarea {
+    width: 600px;
+    height: 200px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "MyFont3";
+    font-weight: 400;
+
+    resize: none;
+
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .survey {
+    padding: 1rem !important;
+  }
+
+  .survey-wrapper {
+    gap: 1.5rem !important;
+    justify-content: center !important;
+    width: 100%;
+
+    .survey-content-heading {
+      padding: 0 20px;
+      width: 361px !important;
+
+      .survey-content {
+        font-family: "MyFont3";
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .select-container {
+    width: 361px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .select-dropdown {
+      appearance: none;
+      width: 100% !important;
+      border: 1px solid black;
+
+      option {
+        border-radius: 0;
+      }
+    }
+  }
+
+  .survey-top {
+    .survey-img {
+      width: 95px !important;
+      height: 26px;
+    }
+
+    h2 {
+      font-family: "MyFont3";
+      font-weight: 700;
+      line-height: 28px;
+      font-size: 20px !important;
+    }
+
+    p {
+      font-family: "MyFont3";
+      font-weight: 400;
+      line-height: 24px;
+      font-size: 16px !important;
+    }
+  }
+
+  .survey-container {
+    max-width: 361px;
+    height: 348px;
+    padding: 10px;
+
+    .survey-left {
+      .category {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        .div {
+          font-size: 13px;
+          font-weight: 700;
+          width: 37px;
+        }
+      }
+    }
+
+    .survey-right {
+      display: flex;
+      gap: 6px;
+
+      .right-list {
+        .survey-header {
+          font-size: 13px;
+        }
+
+        .input {
+          width: 30px;
+
+          input {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .feedback-container {
+    width: 361px !important;
+
+    .feedback-textarea {
+      width: 100%;
+    }
+  }
+
+  .survey-button {
+    width: 288px !important;
+    border: none !important;
+
+    .survey-button-send {
+      border-radius: 4px !important;
+      border: 1px solid black !important;
+      height: 56px !important;
+      padding: 16px !important;
+    }
+  }
+}
+
+@media (min-width: 435px) and (max-width: 768px) {
+  .survey-wrapper {
+    width: 100%;
+
+    .select-container {
+      width: 100%;
+
+      .select-dropdown {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .survey-top {
+    .survey-img {
+      width: 200px;
+      height: 70px;
+    }
+
+    h2 {
+      font-size: 1.5rem !important;
+    }
+
+    p {
+      font-size: 1rem !important;
+    }
+  }
+
+  .survey-list {
+    width: 100%;
+    padding: 0.5rem;
+    padding-top: 10px;
+    gap: 0.5rem;
+
+    .survey-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 69px;
+
+      .list {
+        font-size: 12px !important;
+        width: 50px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .survey-right {
+      gap: 0.3rem;
+
+      .right-list {
+        height: 302px;
+        justify-content: space-around;
+
+        label {
+          font-size: 11px;
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  .feedback-container {
+    width: 100%;
+
+    .feedback-textarea {
+      width: 100% !important;
+    }
+  }
+}

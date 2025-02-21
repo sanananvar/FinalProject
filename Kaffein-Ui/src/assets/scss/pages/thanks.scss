@@ -1,0 +1,38 @@
+@use "../utils/mixins.scss" as *;
+
+.thanks-wrapper {
+  .thanks {
+    padding: 100px 108px;
+    @include flex-center-column;
+    h2 {
+      font-family: "Century751 BT";
+      font-weight: 400;
+      font-size: 56px;
+      line-height: 64px;
+      letter-spacing: 0%;
+      text-align: center;
+      padding: 24px 0;
+    }
+    a {
+      @include btn;
+      background: rgba(42, 40, 40, 1);
+      color: #fff;
+    }
+  }
+}
+
+
+// ! Responsive
+
+// * 430px
+@media (max-width: 435px) {
+    .thanks-wrapper{
+        .thanks{
+            padding: 100px 16px;
+                h2{
+                    font-size: 36px;
+                    line-height: 34px;
+                }
+        }
+    }
+}

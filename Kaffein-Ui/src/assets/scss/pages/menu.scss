@@ -1,0 +1,452 @@
+$text-color: #9f9f9f;
+$transition-speed: 0.3s;
+* {
+  text-decoration: none !important;
+}
+@font-face {
+  font-family: "MyFont";
+  src: url(../../../assets/fonts/century751bt.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyFont2";
+  src: url(../../../assets/fonts/century751italicbt.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyFont3";
+  src: url(../../../assets/fonts/GothamBold.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyFont4";
+  src: url(../../../assets/fonts/GothamBook.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-bar {
+  .lang-select {
+    img {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+#menu {
+  background-color: white;
+  padding: 40px 0;
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .menu-link {
+      display: flex;
+      gap: 30px;
+
+      .menu-item {
+        position: relative;
+
+        .menu-toggle {
+          svg {
+            margin-bottom: 12px;
+          }
+          font-family: "MyFont3", sans-serif;
+          background: none;
+          border: none;
+          font-size: 18px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
+          transition: color $transition-speed;
+        }
+
+        .submenu-list {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background: white;
+          border: 1px solid #ddd;
+          padding: 10px;
+          display: none;
+          flex-direction: column;
+          min-width: 150px;
+          z-index: 1000;
+
+          a {
+            font-family: "MyFont", sans-serif;
+            color: $text-color;
+          }
+
+          &.active {
+            display: flex;
+          }
+
+          .submenu-item {
+            position: relative;
+
+            .submenu-toggle {
+              background: none;
+              border: none;
+              font-size: 16px;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              padding: 8px;
+              width: 100%;
+              text-align: left;
+              transition: color $transition-speed;
+            }
+
+            .hot-menu,
+            .cold-menu {
+              position: relative;
+              background: white;
+              padding: 10px;
+              display: none;
+              flex-direction: column;
+              z-index: 1000;
+            }
+
+            .hot-menu.active,
+            .cold-menu.active {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Drinks
+.drinks-menu {
+  padding: 3rem;
+  background-color: #ffffff;
+
+  .subtitle {
+    font-family: "MyFont", sans-serif;
+    p {
+      font-size: 1rem;
+      color: #9f9f9f;
+    }
+  }
+
+  .title {
+    font-family: "MyFont", sans-serif;
+
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-family: "MyFont3", sans-serif;
+    margin-top: 80px;
+    font-size: 20px;
+    margin-bottom: 2rem;
+
+    font-weight: 700px;
+  }
+
+  .drinks-grid {
+    font-family: "MyFont", sans-serif;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .drink-card {
+      font-family: "MyFont", sans-serif;
+
+      width: calc(33.33% - 1rem);
+      background: #fff;
+      border: 1px solid #ddd;
+      justify-content: space-between;
+      display: flex;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      margin-bottom: 1.5rem;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .drink-image {
+        width: 50px;
+        height: 50px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .card-content {
+        font-family: "MyFont", sans-serif;
+
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h3 {
+          font-family: "MyFont", sans-serif;
+
+          font-size: 1.2rem;
+          margin: 0.5rem 0;
+        }
+
+        p {
+          font-family: "MyFont", sans-serif;
+
+          font-size: 1rem;
+          color: #555;
+        }
+      }
+
+      .description {
+        font-size: 1rem;
+        color: #9f9f9f;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .drinks-grid {
+    .drink-card {
+      width: calc(100% - 1rem) !important;
+    }
+  }
+}
+
+@media ((min-width: 425px) and (max-width: 768px)) {
+  .drinks-grid {
+    .drink-card {
+      width: calc(100% - 1rem) !important;
+    }
+  }
+}
+
+// food
+
+.Food-menu {
+  padding: 3rem;
+  background-color: #ffffff;
+
+  .subtitle {
+    font-family: "MyFont", sans-serif;
+
+    p {
+      font-family: "MyFont", sans-serif;
+
+      font-size: 1rem;
+      color: #9f9f9f;
+    }
+  }
+
+  .title {
+    font-family: "MyFont3", sans-serif;
+
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+
+    p {
+      font-family: "MyFont", sans-serif;
+    }
+  }
+
+  .Food-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .Food-card {
+      width: calc(50% - 1rem);
+      background: #fff;
+      border: 1px solid #ddd;
+      justify-content: space-between;
+      display: flex;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      margin-bottom: 1.5rem;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .Food-image {
+        width: 70px;
+        height: 70px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .Food-content {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+
+        h3 {
+          font-family: "MyFont", sans-serif;
+
+          font-size: 1.2rem;
+          margin: 0.5rem 0;
+        }
+
+        p {
+          font-family: "MyFont", sans-serif;
+
+          font-size: 1rem;
+          color: #555;
+        }
+      }
+
+      .Food-description {
+        font-family: "MyFont", sans-serif;
+
+        font-size: 1rem;
+        color: #9f9f9f;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .Food-grid {
+    .Food-card {
+      width: calc(100% - 1rem) !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Food-grid {
+    .Food-card {
+      width: calc(100% - 1rem) !important;
+    }
+  }
+}
+
+// Dessert
+
+.Dessert-menu {
+  padding: 3rem;
+  background-color: #ffffff;
+
+  .subtitle {
+    p {
+      font-family: "MyFont", sans-serif;
+
+      font-size: 1rem;
+      color: #9f9f9f;
+    }
+  }
+
+  .title {
+    font-family: "MyFont3", sans-serif;
+
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-family: "MyFont", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .Dessert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .Dessert-card {
+      width: calc(50% - 1rem);
+      background: #fff;
+      border: 1px solid #ddd;
+      justify-content: space-between;
+      display: flex;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      margin-bottom: 1.5rem;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .Dessert-image {
+        width: 70px;
+        height: 70px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .Dessert-content {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h3 {
+          font-family: "MyFont", sans-serif;
+
+          font-size: 1.2rem;
+          margin: 0.5rem 0;
+        }
+
+        p {
+          font-family: "MyFont", sans-serif;
+
+          font-size: 1rem;
+          color: #555;
+        }
+      }
+
+      .Dessert-description {
+        font-family: "MyFont", sans-serif;
+
+        font-size: 1rem;
+        color: #9f9f9f;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .Dessert-grid {
+    .Dessert-card {
+      width: calc(100% - 1rem) !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Dessert-grid {
+    .Dessert-card {
+      width: calc(100% - 1rem) !important;
+    }
+  }
+}
