@@ -1,0 +1,75 @@
+@use "../utils/mixins.scss" as *;
+
+.login {
+  @include flex-center-column;
+  height: 100vh;
+  background-image: url(/src/assets/images/photo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  h2 {
+    margin-top: 150px;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  form {
+    @include flex-center-column;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 350px;
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.7);
+      transition: 0.3s;
+      outline: none;
+
+      &:focus {
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #a99a8f;
+      font-size: 1.2rem;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.8;
+        background: #a99a8f;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login {
+    padding: 20px;
+  }
+
+  form {
+    max-width: 300px;
+  }
+}

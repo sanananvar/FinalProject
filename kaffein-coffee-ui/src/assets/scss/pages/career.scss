@@ -1,0 +1,171 @@
+@use "../utils/mixins.scss" as *;
+
+.career-wrapper {
+  .career {
+    @include globalPadding;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0 100px;
+    .section-desc {
+      padding-top: 50px;
+      width: 888px;
+      @include flex-center;
+      margin: 0 auto;
+      padding-bottom: 40px;
+      h1 {
+        font-family: "Century751 BT";
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 44px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+    }
+    .form-row {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+      .form-group {
+        flex: 1;
+        max-width: 392px;
+        border-radius: 4px;
+        border-width: 1px;
+        margin-bottom: 24px;
+        input{
+          color: #2a2828;
+        }
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #000000;
+      span {
+        color: red;
+      }
+    }
+
+    input {
+      width: 100%;
+      padding-top: 20px;
+      padding-right: 8px;
+      padding-bottom: 20px;
+      padding-left: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      line-height: 24px;
+      &:focus {
+        border-color: #000;
+        outline: none;
+      }
+    }
+
+    .file-upload {
+      max-width: 392px;
+      width: 100%;
+      margin: 0 auto;
+      .inp {
+        border: 2px dashed #ccc;
+        padding: 15px;
+        text-align: center;
+        border-radius: 5px;
+
+        input {
+          display: none;
+        }
+
+        label {
+          color: rgba(0, 0, 0, 0.87);
+          cursor: pointer;
+          text-align: center;
+        }
+
+        p {
+          font-size: 12px;
+          color: #666;
+        }
+      }
+      .cv-preview {
+        padding-top: 10px;
+        span {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0px;
+          color: rgba(0, 0, 0, 0.87);
+          padding-right: 4px;
+        }
+        button {
+          background: #fff;
+          border: none;
+          svg {
+            color: red;
+            padding-top: 5px;
+            cursor: pointer;
+            font-size: 25px;
+          }
+        }
+      }
+    }
+
+    .submit-btn {
+      max-width: 288px;
+      margin: auto;
+      width: 100%;
+      background: #333;
+      color: white;
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 40px;
+
+      &:hover {
+        background: #555;
+      }
+    }
+  }
+}
+
+// ! Responsive
+
+// * 430px
+@media (max-width: 435px) {
+  .career-wrapper {
+    .career {
+      padding: 0 16px !important;
+      width: 100%;
+      .section-desc {
+        width: 100%;
+        h1 {
+          font-size: 40px;
+          line-height: 28px;
+        }
+      }
+
+      .form-row {
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+
+        .form-group {
+          width: 100% !important;
+          max-width: none !important;
+        }
+
+        input {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

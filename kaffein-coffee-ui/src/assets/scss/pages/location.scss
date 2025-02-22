@@ -1,0 +1,155 @@
+@use "../utils/mixins.scss" as *;
+
+@font-face {
+  font-family: "MyFont";
+  src: url(../../../assets/fonts/century751bt.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyFont1";
+  src: url(../../../assets/fonts/GothamBook.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.location-wrapper {
+  .location {
+    margin: 40px 0 90px;
+    .section-wrapper {
+      width: 100%;
+      @include globalPadding;
+      .bread-crumbs a:nth-child(1) {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        color: grey;
+      }
+      .bread-crumbs a:nth-child(3) {
+        color: #000;
+      }
+      .location-text {
+        margin-top: 15px;
+        h1 {
+          font-size: 56px;
+          font-weight: 100;
+          font-family: "MyFont", sans-serif;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+      }
+      // .location-map {
+      //   margin-top: 50px;
+      //   iframe {
+      //     display: block;
+      //     margin: 0 auto;
+      //   }
+      // }
+
+      .location-address {
+        .location-card {
+          font-family: "MyFont", sans-serif;
+          text-align: center;
+          margin-top: 50px;
+          font-size: 20px;
+          line-height: 52px;
+
+          h5 {
+            font-family: "MyFont3", sans-serif;
+            span {
+              font-family: "MyFont", sans-serif;
+              font-weight: 100;
+            }
+          }
+        }
+        hr {
+          margin-top: 25px;
+        }
+        .social-links {
+          text-align: center;
+          margin-bottom: 200px;
+          margin-top: 20px;
+          .socials-item {
+            margin-left: 20px;
+            img {
+              border: 1px solid white;
+
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+              filter: invert(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.leaflet-control-container {
+  .leaflet-control-attribution {
+    display: none;
+  }
+}
+
+@media (max-width: 435px) {
+  .bread-crumbs {
+    p {
+      width: 200px !important;
+    }
+  }
+  .leaflet-container {
+    width: 400px !important;
+    height: 800px !important;
+    // margin: auto !important;
+  }
+  .location-wrapper .location .section-wrapper {
+    padding: 0 16px !important;
+  }
+  .location-text {
+    h1 {
+      font-size: 45px !important;
+    }
+    .leaflet-control-container {
+      .leaflet-control-attribution {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .leaflet-container {
+    width: 382px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .leaflet-container {
+    width: 358px !important;
+  }
+}
+@media (max-width: 375px) {
+  .leaflet-container {
+    width: 345px !important;
+  }
+}
+
+// @media (max-width: 425px) {
+// }
+
+// @media (max-width: 425px) {
+// }
+
+// @media (max-width: 425px) {
+//   .leaflet-container {
+//     height: 50vh !important; /* Daha kiçik ekranlarda xəritənin hündürlüyü */
+//     width: 60vw !important;
+//   }
+
+//   .leaflet-marker-icon {
+//     width: 400px !important; /* Markerin ölçüsünü kiçildirik */
+//     height: 6000px !important;
+//   }
+// }

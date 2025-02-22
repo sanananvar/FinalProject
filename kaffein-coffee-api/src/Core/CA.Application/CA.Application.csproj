@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CA.Domain\CA.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="DTOs\" />
+    <None Remove="DTOs\Common\" />
+    <None Remove="DTOs\Common\ResponseDTOs\" />
+    <None Remove="Exceptions\" />
+    <None Remove="Exceptions\Common\" />
+    <None Remove="Exceptions\AuthExceptions\" />
+    <None Remove="Extensions\" />
+    <None Remove="Extensions\FileUploadExtensions\" />
+    <None Remove="Helpers\" />
+    <None Remove="Repositories\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Tokens\" />
+    <None Remove="DTOs\TokenDTOs\" />
+    <None Remove="Services\MailServices\" />
+    <None Remove="DTOs\MailDTOs\" />
+    <None Remove="Services\AuthServices\" />
+    <None Remove="DTOs\AuthDTOs\" />
+    <None Remove="Helpers\CustomCoders\" />
+    <None Remove="DTOs\CarouselDTOs\" />
+    <None Remove="DTOs\IdentityDTOs\" />
+    <None Remove="Exceptions\IdentityExceptions\" />
+    <None Remove="DTOs\ReviewDTOs\" />
+    <None Remove="DTOs\ProductDTOs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTOs\Common\" />
+    <Folder Include="DTOs\Common\ResponseDTOs\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Exceptions\Common\" />
+    <Folder Include="Exceptions\AuthExceptions\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Extensions\FileUploadExtensions\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Services\Tokens\" />
+    <Folder Include="DTOs\TokenDTOs\" />
+    <Folder Include="Services\MailServices\" />
+    <Folder Include="DTOs\MailDTOs\" />
+    <Folder Include="Services\AuthServices\" />
+    <Folder Include="DTOs\AuthDTOs\" />
+    <Folder Include="Helpers\CustomCoders\" />
+    <Folder Include="DTOs\CarouselDTOs\" />
+    <Folder Include="DTOs\IdentityDTOs\" />
+    <Folder Include="Exceptions\IdentityExceptions\" />
+    <Folder Include="DTOs\ReviewDTOs\" />
+    <Folder Include="DTOs\ProductDTOs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
+  </ItemGroup>
+</Project>

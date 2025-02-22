@@ -1,0 +1,492 @@
+@use "../utils/mixins.scss" as *;
+
+.home-wrapper {
+  .home {
+    .section-wrapper {
+      @include globalPadding;
+      margin-top: 145px;
+      // ! Product section start
+      .product {
+        .title {
+          @include flex-start;
+          gap: 20px;
+          padding-bottom: 56px;
+          h4 {
+            font-family: "Century751 BT";
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 44px;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 5px;
+              width: 41px;
+              height: 2px;
+              background-color: #2a2828;
+            }
+          }
+
+          h1 {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 52px;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+          }
+        }
+        .products-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 15%;
+          .single-product {
+            width: 288px;
+            @include flex-center;
+            flex-direction: column;
+            text-align: center;
+            img {
+              transition: transform 0.3s ease-in-out;
+            }
+            &:hover img {
+              transform: scale(1.1);
+            }
+            h5 {
+              font-family: "Century751 BT";
+              font-size: 24px;
+              font-weight: 400;
+              line-height: 32px;
+              padding-top: 12px;
+              text-align: center;
+              text-underline-position: from-font;
+              text-decoration-skip-ink: none;
+              color: #000000de;
+            }
+            p {
+              color: #00000099;
+              font-size: 16px;
+              font-weight: 400;
+              padding-top: 10px;
+              line-height: 24px;
+              text-align: center;
+              text-underline-position: from-font;
+              text-decoration-skip-ink: none;
+            }
+            .price {
+              color: #000000de;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 24px;
+              text-align: center;
+              text-underline-position: from-font;
+              text-decoration-skip-ink: none;
+            }
+          }
+        }
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 42px;
+        button {
+          @include btn;
+        }
+      }
+      // ! Product section end
+
+      // ! Mobile Product section start
+
+      .mySwiper {
+        display: none;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      .single-product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h5 {
+          padding-top: 10px;
+          font-size: 16px;
+        }
+        p {
+          padding-top: 8px;
+          color: #00000099;
+        }
+        .price {
+          padding-top: 12px;
+          color: #000000de;
+        }
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      // ! Mobile Product section end
+
+      // ! Loyalty-card section start
+      .loyalty-card {
+        @include space-between;
+        margin-top: 145px;
+        .text {
+          h3 {
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 92px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+          }
+          p {
+            color: #00000099;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 40px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+          }
+        }
+        .section-image {
+          width: 25%;
+          height: auto;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      // ! Loyalty-card section end
+
+      // ! Customer section start
+      .customer {
+        @include flex-center;
+        .customer-desc {
+          text-align: center;
+          h5 {
+            font-family: "Century751 BT";
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 44px;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 4px;
+              left: 45%;
+              width: 60%;
+              max-width: 50px;
+              height: 2px;
+              background-color: #2a2828;
+              transform: translateX(-50%);
+            }
+          }
+          h2 {
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 92px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+          }
+          .customer-btn {
+            @include btn;
+          }
+        }
+      }
+      // ! Customer section end
+    }
+  }
+}
+
+// ! Responsive
+
+// * 1024px
+@media (max-width: 1024px) {
+  .home-wrapper {
+    .home {
+      .section-wrapper {
+        margin-top: 100px;
+        .product {
+          .products-container {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        .loyalty-card {
+          .text {
+            h3 {
+              font-size: 63px;
+            }
+            p {
+              font-size: 26px;
+            }
+          }
+          .section-image {
+            width: 35%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// * 950px
+@media (max-width: 950px) {
+  .home-wrapper {
+    .home {
+      .section-wrapper {
+        .product {
+          .products-container {
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            place-items: center;
+          }
+        }
+        .loyalty-card {
+          .text {
+            h3 {
+              font-size: 53px;
+            }
+            p {
+              font-size: 26px;
+            }
+          }
+          .section-image {
+            width: 35%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// * 800px
+@media (max-width: 800px) {
+  .home-wrapper {
+    .home {
+      .section-wrapper {
+        .loyalty-card {
+          .text {
+            h3 {
+              font-size: 44px;
+            }
+            p {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// * 768px
+@media (max-width: 768px) {
+  .home-wrapper {
+    .home {
+      .section-wrapper {
+        .loyalty-card {
+          .text {
+            h3 {
+              font-size: 38px;
+            }
+            p {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// * 630px
+@media (max-width: 630px) {
+  .home-wrapper {
+    .home {
+      .section-wrapper {
+        .loyalty-card {
+          .text {
+            h3 {
+              font-size: 34px;
+              line-height: 52px;
+            }
+            p {
+              font-size: 16px;
+            }
+          }
+          .section-image {
+            width: 35%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// * 575px
+@media (max-width: 575px) {
+  .home-wrapper {
+    .home {
+      .section-wrapper {
+        .product {
+          .products-container {
+            grid-template-columns: repeat(1, 1fr);
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            place-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// * 515px
+@media (max-width: 515px) {
+  .home-wrapper {
+    .home {
+      .section-wrapper {
+        padding: 0 20px !important;
+        .product {
+          .title {
+            @include flex-start;
+            h4 {
+              font-size: 26px;
+            }
+            h1 {
+              font-size: 32px;
+            }
+          }
+          .products-container {
+            grid-template-columns: repeat(1, 1fr);
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            place-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// * 426px
+@media (max-width: 426px) {
+  .home-wrapper {
+    .home {
+      .section-wrapper {
+        .product {
+          padding-bottom: 0px;
+          .products-container {
+            display: none;
+          }
+        }
+        .loyalty-card {
+          .text {
+            h3 {
+              font-size: 24px;
+              line-height: 32px;
+            }
+            p {
+              font-size: 16px;
+            }
+          }
+          .section-image {
+            width: 35%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+        .mySwiper {
+          display: block;
+          width: 100%;
+
+          .swiper-wrapper {
+            max-width: 425px;
+            .swiper-slide {
+              width: 267px !important;
+            }
+          }
+          .single-product {
+            width: 267px;
+            text-align: center;
+            img {
+              width: 81px;
+              height: 139px;
+            }
+          }
+        }
+        .btn {
+          display: none;
+        }
+        .customer {
+          margin: 150px 0;
+          @include flex-center;
+          .customer-img {
+            img {
+              width: 173px;
+            }
+          }
+          .customer-desc {
+            text-align: center;
+            h5 {
+              font-size: 20px;
+
+              &::after {
+                left: 50%;
+                width: 41px;
+              }
+            }
+            h2 {
+              font-size: 24px;
+              padding-top: 8px;
+              padding-bottom: 24px;
+              line-height: 32px;
+            }
+            .customer-btn {
+              padding: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

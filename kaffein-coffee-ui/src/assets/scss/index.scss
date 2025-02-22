@@ -1,0 +1,23 @@
+// ! Base scss
+
+@use "./base/base.scss";
+@use "./base/typography.scss";
+
+// ! Layout scss
+@use "./layout/header.scss";
+@use "./layout/footer.scss";
+
+// ! Pages scss
+@use "./pages/home.scss";
+@use "./pages/interior.scss";
+@use "./pages/career.scss";
+@use "./pages/thanks.scss";
+@use "./pages/about.scss";
+@use "./pages/location.scss";
+@use "./pages/login.scss";
+@use "./pages/careerList.scss";
+@use "./pages/careerPersonal.scss";
+
+// ! Vendors scss
+@use "./vendor/swiper.scss";
+@use "./vendor/pagination.scss";
