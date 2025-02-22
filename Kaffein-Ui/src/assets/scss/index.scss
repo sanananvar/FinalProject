@@ -8,12 +8,12 @@
 @use "./layout/footer.scss";
 
 // ! Pages scss
-// @use "./pages/home.scss";
-// @use "./pages/interior.scss";
-// @use "./pages/career.scss";
-// @use "./pages/thanks.scss";
-// @use "./pages/about.scss";
-// @use "./pages/location.scss";
+@use "./pages/home.scss";
+@use "./pages/interior.scss";
+@use "./pages/career.scss";
+@use "./pages/thanks.scss";
+@use "./pages/about.scss";
+@use "./pages/location.scss";
 
 // ! Vendors scss
 @use "./vendor/swiper.scss";

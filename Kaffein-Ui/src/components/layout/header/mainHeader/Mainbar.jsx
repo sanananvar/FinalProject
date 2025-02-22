@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import LeftLogo from "../utils/LeftLogo";
+import LeftLogo from "../utils/LeftLogo.jsx";
 import RightLang from "../utils/RightLang.jsx";
 import { navMenu } from "../../../../mocks/NavData.js";
 import scrolledLogo from "../../../../../public/kaffeinTextLogo.svg";
